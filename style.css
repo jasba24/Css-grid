@@ -241,8 +241,37 @@ body {
   .header-logo,
   .header-menu {
     font-size: .6em;
+    display: flex;
+    align-items: center;
+  }
+  .header h1 {
+    align-items: center;  
   }
   .hero {
-    width: 89vw;
+    width: 660px;
+    right: 0;
+    left: 0;
+    margin-left: 13px;
+  }
+  .nav {
+    display: none;
+  }
+  .hero-item4 {
+    display: none;
+  }
+  .hero-item5 {
+    display: none;
+  }
+  .hero-item9 {
+    display: none;
+  }
+  .hero-item10 {
+    display: none;
+  }
+  .hero-item14 {
+    display: none;
+  }
+  .hero-item15 {
+    display: none;
   }
 }
