@@ -50,3 +50,82 @@ body {
   height: 30px;
   padding-left: 5px;
 }
+
+.nav {
+  position: relative;
+  width: 60px;
+  height: 92vh;
+  background-color: rgba(255, 0, 0, .65);
+}
+.nav-details {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  padding: 10px 0;
+}
+.nav p {
+  color: white;
+  font-size: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  margin: 0;
+}
+.nav img {
+  height: 20px;
+  margin: 0;
+}
+.home {
+  padding-top: 20px;
+}
+
+.hero {
+  margin-left: 20px;
+  position: absolute;
+  top: 50px;
+  bottom: 0;
+  left: 60px;
+  width: 800px;
+  height: 700px;
+  border: 1px solid red;
+  display: grid;
+  grid-gap: 20px 30px;
+  grid-template-columns: repeat(3, 200px);
+  grid-template-rows: 20px 136px 22px 134px 21px 135px;
+  grid-template-areas: "hero-span1 hero-span1 hero-span1"
+                       "hero-item1 hero-item2 hero-item3"
+                       "hero-span2 hero-span2 hero-span2"
+                       /* "hero-item1 hero-item2 hero-item3" */
+                       /* "hero-span3 hero-span3 hero-span3" */
+                       /* "hero-item1 hero-item2 hero-item3"; */
+}
+.hero img {
+  width: 200px;
+  height: 134px;
+}
+.hero-item1 {
+  grid-area: hero-item1;
+}
+.hero-item2 {
+  grid-area: hero-item2;
+}
+.hero-item3 {
+  grid-area: hero-item3;
+}
+.hero-span1 {
+  grid-area: hero-span1;
+}
+.hero-span2 {
+  grid-area: hero-span2;
+}
+.hero-span3 {
+  grid-area: hero-span3;
+}
+@media screen and (max-width: 700px) {
+  .header-logo,
+  .header-menu {
+    display: none;
+  }
+  .hero {
+    width: 89vw;
+  }
+}
