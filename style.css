@@ -237,3 +237,127 @@ body {
     top: 114px;
   }
 }
+
+body {
+  margin: 0;
+  margin: 0 auto;
+  overflow-x: unset;
+}
+.header {  
+  display: grid;  
+  grid-template-columns: 160px minmax(400px, 1000px) 200px;
+  grid-template-areas: "movie input bambi";
+  background: white;
+  height: 50px;
+}
+.header img {
+  width: 30px;
+  height: 30px;
+  margin: 0;
+  display: inline;
+}
+.header h1 {
+  color: white;
+  -webkit-text-stroke: 1px #fd6766;
+  font-family: serif;
+  font-weight: normal;
+  display: inline;
+  margin: 0;
+}
+.header-logo {
+  grid-area: movie;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+.header-logo img {
+  margin: 0 5px;
+}
+.header input {
+  grid-area: input;
+  margin: 10px 20vw;
+  width: 33em;
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: 1px solid #038BCE;
+}
+.header input::placeholder {
+  color: #dbdbe2;
+}
+.header-menu {
+  grid-area: bambi;
+  margin-left: 320px;
+  font-size: .7em;
+  display: flex;
+  align-items: center;
+  margin: 0;
+}
+.header h2 {
+  margin: 0;
+}
+.header-menu img {
+  border-radius: 50%;
+  height: 30px;
+  padding-left: 5px;
+}
+
+@media screen and (max-width: 1300px) {
+  .header input {
+    margin: 10px 17% 10px 15%;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .header input {
+    margin: 10px 10vw;
+  }
+}
+@media screen and (max-width: 920px) {
+  .header input {
+    margin: 10px 7vw;
+  }
+}
+
+@media screen and (min-width: 100px) and (max-width: 800px) {
+  .header input {
+    margin: 10px 10vw;
+  }
+} 
+
+@media screen and (max-width: 880px) {
+  .header input {
+    margin: 10px 0;
+  }
+  .header-input {
+    width: 462px;
+  }
+}
+
+
+@media screen and (max-width: 823px) {
+  .header input {
+    display: none;
+  }
+  .header {
+    width: 100vw;
+    height: 50px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "movie bambi";
+  }
+  
+  .header-logo,
+  .header-menu {
+    display: flex;
+    align-items: center;
+  }
+  body {
+    background-color: white;
+  }
+}
+@media screen and (max-width: 650px) {
+  .header-input {
+    display: none;
+  }
+  .header {
+    width: 643px;
+  }
+}
